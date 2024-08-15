@@ -1,9 +1,9 @@
-// Select DOM elements
+
 const inputField = document.getElementById('todo-input') as HTMLInputElement;
 const addButton = document.getElementById('add-todo') as HTMLButtonElement;
 const todoList = document.getElementById('todo-list') as HTMLUListElement;
 
-// Function to create a TODO item
+
 function createTodoItem(text: string) {
     const li = document.createElement('li');
     li.className = 'todo-item';
@@ -28,7 +28,6 @@ function createTodoItem(text: string) {
     return li;
 }
 
-// Function to add a TODO item
 function addTodo() {
     const todoText = inputField.value.trim();
     if (todoText !== '') {
@@ -38,7 +37,6 @@ function addTodo() {
     }
 }
 
-// Function to edit a TODO item
 function editTodoItem(todoText: HTMLSpanElement, todoItem: HTMLLIElement) {
     const newText = prompt('Edit TODO:', todoText.textContent || '');
     if (newText !== null && newText.trim() !== '') {
@@ -46,15 +44,15 @@ function editTodoItem(todoText: HTMLSpanElement, todoItem: HTMLLIElement) {
     }
 }
 
-// Function to delete a TODO item
+
 function deleteTodoItem(todoItem: HTMLLIElement) {
     todoList.removeChild(todoItem);
 }
 
-// Event listener for the Add button
+
 addButton.addEventListener('click', addTodo);
 
-// Optionally, allow pressing Enter to add a TODO
+
 inputField.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         addTodo();
