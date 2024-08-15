@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple TODO</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 300px;
+            max-width: 100%;
+        }
+        input[type="text"] {
+            width: calc(100% - 90px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 80px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            margin-left: 10px;
+        } */
+        .todo-list {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .todo-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            /* display: flex; */
+            /* justify-content: space-between; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="todo-input" placeholder="Enter a TODO">
+        <button id="add-todo">Add</button>
+        <ul id="todo-list" class="todo-list"></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
